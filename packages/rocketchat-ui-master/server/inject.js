@@ -15,7 +15,7 @@ Inject.rawBody('page-loading', `
 RocketChat.settings.get('Site_Url', function() {
 	Meteor.defer(function() {
 		if (__meteor_runtime_config__.ROOT_URL_PATH_PREFIX && __meteor_runtime_config__.ROOT_URL_PATH_PREFIX.trim() !== '') {
-			let base_url = __meteor_runtime_config__.ROOT_URL+__meteor_runtime_config__.ROOT_URL_PATH_PREFIX;
+			let base_url = __meteor_runtime_config__.ROOT_URL;
 
 			if(/\/$/.test(base_url) === false) {
 				base_url += '/';
