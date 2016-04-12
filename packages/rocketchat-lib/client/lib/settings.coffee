@@ -42,7 +42,7 @@ Meteor.startup ->
 				return c.stop()
 
 			Meteor.setTimeout ->
-				if __meteor_runtime_config__.ROOT_URL isnt location.origin
+				if __meteor_runtime_config__.ROOT_URL.startsWith(location.origin) is false
 					currentUrl = location.origin + __meteor_runtime_config__.ROOT_URL_PATH_PREFIX
 					swal
 						type: 'warning'
